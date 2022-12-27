@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="h-full w-full">
-        <div className="p-5">
+        <div className="scroll-smooth">
           <MainLayout >
             <Landing/>
           </MainLayout>

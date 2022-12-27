@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { ScriptProps } from "next/script";
 
-const Landing: NextPage<ScriptProps> = () => {
+const Experience: NextPage<ScriptProps> = () => {
     return(
         <div className="h-full">
             
@@ -9,4 +9,4 @@ const Landing: NextPage<ScriptProps> = () => {
     )
 }
 
-export default Landing
+export default Experience
