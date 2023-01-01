@@ -3,8 +3,8 @@ import { ScriptProps } from "next/script";
 
 const Experience: NextPage<ScriptProps> = () => {
     return(
-        <div className="h-full">
-            
+        <div className="w-full` h-screen`">
+            <span className="text-6xl text-white">Experience</span>
         </div>
     )
 }

@@ -6,13 +6,13 @@ import Landing from '../PageComponents/Landing'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center">
       <Head>
         <title>Abbas Ali Dalal</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="h-full w-full">
-        <div className="scroll-smooth">
+        <div className="scroll-smooth h-full w-full">
           <MainLayout >
             <Landing/>
           </MainLayout>
