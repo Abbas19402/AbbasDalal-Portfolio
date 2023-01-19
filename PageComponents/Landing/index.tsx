@@ -11,11 +11,8 @@ import Connect from "./Connect";
 const Landing: NextPage<ScriptProps> = () => {
     return(
         <div className={`h-full scroll-smooth overflow-y-auto ${Styles.noScroll}`}>
-            <div id="introduction">
+            <div id="home">
                 <Introduction/>
-            </div>
-            <div id="experience">
-                <Experience />
             </div>
             <div id="skills">
                 <Skills />

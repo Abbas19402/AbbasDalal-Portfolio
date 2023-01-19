@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/Store";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import Menu from '../../../public/Assets/Icons/menu.png'
+import Menu from '../../Icons/menu-4-fill.png'
 
 const Sidebar: NextPage = () => {
   const dispatch = useDispatch();
@@ -25,8 +25,8 @@ const Sidebar: NextPage = () => {
           dispatch(toggleSidebar(true));
         }}
       >
-        <div className="border-2 w-10 h-10 flex justify-center items-center rounded-full">
-          <Image alt="menu" src={Menu}/>
+        <div className="text-slate-200 w-10 h-10 flex justify-center items-center rounded-full">
+          {sidebar ? <span className="text-black"></span> : <Image alt="Menu" src={Menu}/>}
         </div>
       </div>
       <ul className="flex flex-col w-full justify-center items-center backdrop-blur-md h-full" onMouseLeave={() => {
@@ -42,7 +42,7 @@ const Sidebar: NextPage = () => {
           }}>
             <Link href={`#${item.link}`}>
               <div className="m-2 transition-all hover:scale-110 hover:cursor-pointer group">
-                <span className="text-gray-400 tracking-widest font-light group-hover:font-normal group-hover:text-black uppercase hover:drop-shadow-lg">
+                <span className="text-gray-600 tracking-widest font-light group-hover:font-normal group-hover:text-black uppercase hover:drop-shadow-lg">
                   {item.name}
                 </span>
               </div>

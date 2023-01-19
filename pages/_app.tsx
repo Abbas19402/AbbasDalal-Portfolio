@@ -4,15 +4,11 @@ import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
 import Store from '../redux/Store'
-import { Londrina_Shadow , Zilla_Slab_Highlight , Zilla_Slab } from '@next/font/google'
+import { Rajdhani } from '@next/font/google'
 
-const londrinaShadow = Londrina_Shadow({
+const rajdhani = Rajdhani({
   subsets: ['latin'],
   weight: '400'
-})
-const zillaSlab = Zilla_Slab({
-  subsets: ['latin'],
-    weight: '400'
 })
 
 
@@ -22,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Provider store={Store}>
         <PersistGate persistor={persistor}>
-          <main className={zillaSlab.className}>
+          <main className={rajdhani.className}>
             <Component {...pageProps} />
           </main>
         </PersistGate>

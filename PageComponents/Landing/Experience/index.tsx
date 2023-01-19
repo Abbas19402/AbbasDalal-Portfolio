@@ -11,7 +11,7 @@ const Experience: NextPage<ScriptProps> = () => {
         <div>
             <span className="text-6xl">My Work</span>
         </div>
-        <div className="w-[80%] h-[80%] flex justify-center items-center rounded-2xl bg-white">
+        <div className="w-[80%] h-[80%] flex justify-center items-center rounded-2xl">
             <div className="w-[80%] flex justify-around items-center gap-4">
                 {/* Details */}
                 <div className="w-[60%] h-full flex flex-col items-center justify-center gap-3">
@@ -44,7 +44,7 @@ const Experience: NextPage<ScriptProps> = () => {
                 </div>
                 </div>
                 {/* Image */}
-                <div className="w-[40%] h-[80%] rounded-lg overflow-hidden">
+                <div className="w-[20%] h-[40%] rounded-lg overflow-hidden">
                     <Image alt="companyImage" src={Websenor} className="w-full h-full"/>
                 </div>
             </div>
