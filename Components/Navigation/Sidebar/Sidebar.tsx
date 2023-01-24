@@ -19,7 +19,7 @@ const Sidebar: NextPage = () => {
   return (
     <div className="w-full h-full flex justify-center items-center ">
       <div
-        className={`fixed top-7 right-7 transition-all duration-300 hover:cursor-pointer hover:scale-110 ${sidebarStatus ? 'z-10' : 'z-auto'}`}
+        className={`fixed top-7 right-7 transition-all duration-300  hover:scale-110 ${sidebarStatus ? 'z-10' : 'z-auto'}`}
         onMouseOver={() => {
           setSidebar(true);
           dispatch(toggleSidebar(true));
@@ -40,8 +40,8 @@ const Sidebar: NextPage = () => {
             setSidebar(!sidebar);
             dispatch(toggleSidebar(!sidebar));
           }}>
-            <Link href={`#${item.link}`}>
-              <div className="m-2 transition-all hover:scale-110 hover:cursor-pointer group">
+            <Link href={`#${item.link}`} className="cursor-none">
+              <div className="m-2 transition-all hover:scale-110  group">
                 <span className="text-gray-600 tracking-widest font-light group-hover:font-normal group-hover:text-black uppercase hover:drop-shadow-lg">
                   {item.name}
                 </span>

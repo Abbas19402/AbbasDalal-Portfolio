@@ -1,8 +1,7 @@
 import type { NextPage } from "next"
 import type { ScriptProps } from "next/script"
 import Sidebar from "../../Components/Navigation/Sidebar/Sidebar";
-import Image from "next/image";
-import Background from '../../public/Assets/Background/cool-background.png'
+import CustomCursor from "../../Components/Cursor/customCursor";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/Store";
 

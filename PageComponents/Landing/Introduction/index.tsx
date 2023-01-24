@@ -43,7 +43,7 @@ const Introduction: NextPage<ScriptProps> = () => {
                             I'm a 
                         </span>
                     </div>
-                    <div className="flex flex-row items-end font-semibold bg-clip-text bg-gradient-to-r to-red-800 from-orange-400 transition-all duration-500 hover:cursor-pointer drop-shadow-2xl ">
+                    <div className="flex flex-row items-end font-semibold bg-clip-text bg-gradient-to-r to-red-800 from-orange-400 transition-all duration-500  drop-shadow-2xl ">
                         <span className={`text-3xl md:text-5xl lg:text-6xl text-transparent ${neucha.className} uppercase font-semibold whitespace-nowrap lg:font-normal`}>
                             Full Stack Developer
                         </span>
