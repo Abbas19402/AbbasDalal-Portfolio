@@ -21,7 +21,7 @@ const Skills: NextPage<ScriptProps> = () => {
             </div>
             <div className="w-fit max-w-[80%] lg:max-w-[70vw] h-fit flex flex-row justify-center items-center gap-3 overflow-hidden flex-wrap ">
             {SkillsArray.map((icon , key) => (
-                <div className="h-30 w-30 flex flex-col justify-center items-center rounded-tl-2xl p-2 m-4">
+                <div key={key} className="h-30 w-30 flex flex-col justify-center items-center rounded-tl-2xl p-2 m-4">
                     <div className="h-20 w-20 flex items-center justify-center relative rounded-lg overflow-hidden">
                         <Image alt={`${icon.value}`} src={`${icon.image.src}`} fill={true}/>
                     </div>
