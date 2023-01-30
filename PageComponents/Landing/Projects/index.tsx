@@ -3,6 +3,7 @@ import { ScriptProps } from "next/script";
 import { useEffect } from "react";
 import Cards from "../../../Components/Cards";
 import ProjectsArray from "../../../Constants/Projects";
+import Gradients from "../../../Components/Cards/Projects/randomGradientsGenerator";
 
 const Projects: NextPage<ScriptProps> = () => {
     useEffect(()=> {},[ProjectsArray])
@@ -15,12 +16,10 @@ const Projects: NextPage<ScriptProps> = () => {
                 {ProjectsArray.map((item,key) => (
                     <Cards.ProjectCard
                         key={key}
-                        gradientFrom={item.gradientFrom}
-                        gradientVia={item.gradientVia}
-                        gradientTo={item.gradientTo}
+                        gradient={item.gradient}
                         title={item.title}
                         imageSrc={item.image}
-                        description={item.description}
+                        description={item.description}  
                         shortDesc={item.shortDesc}
                         techUsed={item.techUsed}
                     />
