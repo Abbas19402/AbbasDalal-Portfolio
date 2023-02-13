@@ -3,10 +3,13 @@
 }
 
 .cursor {
-  background-color: rgba(0, 0, 0, 0.738);
-  height: 32px;
-  width: 32px;
-  border: 2px solid white;
+  --cursor-size: 50px;
+  --color: 89, 180, 233;
+
+  background-color: rgba(0, 0, 0, 0.18);
+  height: var(--cursor-size);
+  width: var(--cursor-size);
+  border: 4px solid rgb(var(--color));
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -14,3 +17,28 @@
   pointer-events: none;
   z-index: 10000000000000;
 }
+
+.cursor::before {
+  --cursor-size: 30px;
+  --color: 89, 180, 233;
+    content: "";
+    display: block;
+    width: calc(var(--cursor-size) / 2);
+    height: calc(var(--cursor-size) / 2);
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    border: calc(var(--cursor-size) / 6) 
+            solid rgba(var(--color), 0.2);
+  
+    border-radius: 50%;
+}
+
+
+
+
+
+

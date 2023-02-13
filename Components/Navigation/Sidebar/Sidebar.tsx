@@ -40,7 +40,7 @@ const Sidebar: NextPage = () => {
             setSidebar(!sidebar);
             dispatch(toggleSidebar(!sidebar));
           }}>
-            <Link href={`#${item.link}`} className="cursor-none">
+            <Link href={`#${item.link}`}>
               <div className="m-2 transition-all hover:scale-110  group">
                 <span className="text-gray-600 tracking-widest font-light group-hover:font-normal group-hover:text-black uppercase hover:drop-shadow-lg">
                   {item.name}
