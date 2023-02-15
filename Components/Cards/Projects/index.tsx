@@ -1,8 +1,9 @@
-import { StaticImageData } from "next/image";
+import React from "react";
 import Image from "next/image";
-import React, { useEffect } from "react";
-import Button from "../../Buttons/Common/common_button";
 import Link from "next/link"
+import { StaticImageData } from "next/image";
+
+import Button from "../../Buttons/Common/common_button";
 interface Props {
     gradient: {From: String, Via: String, To: String},
     title: String,
@@ -26,16 +27,16 @@ const ProjectCard: React.FC<Props> = ({ gradient, description , shortDesc ,image
                                 </div>
                                 <div className="w-full h-full p-2 hidden md:flex justify-end items-end">
                                     <Link href={`${github}`} target={`_blank`}>
-                                        <Button Title={'Github'}/>
+                                        <Button Title={'Github'} Background={'bg-transparent'} TextColor={'text-white'}/>
                                     </Link>
                                 </div>
                             </div>
                             <div className="w-full">
                                 <span className="text-xl text-white">{shortDesc}</span>
                             </div>
-                            <div className="w-full h-fit lg:hidden p-2 flex justify-start md:justify-center items-center">
+                            <div className="w-full h-fit md:hidden py-2 flex justify-start md:justify-center items-center">
                                 <Link href={`${github}`} target={`_blank`}>
-                                    <Button Title={'Github'}/>
+                                    <Button Title={'Github'} Background={'bg-transparent'} TextColor={'text-white'}/>
                                 </Link>
                             </div>
                         </div>
