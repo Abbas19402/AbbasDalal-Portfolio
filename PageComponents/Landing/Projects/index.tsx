@@ -11,10 +11,10 @@ const Projects: NextPage<ScriptProps> = () => {
         <div className="w-full h-fit relative overflow-hidden">
             <div className="w-full h-full flex flex-col justify-center items-center">
                 <div className="w-full p-2 text-center">
-                    <span className="text-white text-6xl font-extrabold tracking-widest">My Work</span>
+                    <span className="text-white text-6xl tracking-wider">Projects</span>
                 </div>
                 {ProjectsArray.map((item,key) => (
-                    <div className="my-5">
+                    <div className="my-5 w-full px-6 md:px-10 lg:px-40">
                         <Cards.ProjectCard
                             key={key}
                             gradient={item.gradient}

@@ -21,7 +21,7 @@ const Button: React.FC<Props> = ({ Title , Background , TextColor}) => {
             <div className="tracking-wider">
                 <span className={`${Background != '' ? TextColor : 'text-gray-800'} font-bold`}>{Title}</span>
             </div>
-            <div className={`${manrope.className} text-2xl p-2 whitespace-nowrap`}>
+            <div className={`${manrope.className} text-2xl px-2 whitespace-nowrap`}>
                 <span className={`${Background != '' ? TextColor : 'text-gray-800'}`}>{`->`}</span>
             </div>
         </div>

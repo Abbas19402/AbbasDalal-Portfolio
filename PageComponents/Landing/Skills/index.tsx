@@ -15,9 +15,9 @@ const QuickSand = Roboto({
 const Skills: NextPage<ScriptProps> = () => {
     console.log(SkillsArray[0].image)
     return(
-        <div className="w-full md:w-fit h-full flex flex-col mx-auto justify-center items-center py-10 mb-20">
-            <div className={`my-5 text-center ${QuickSand.className} ${Styles.heading}`}>
-                <span className="text-white text-6xl font-extrabold tracking-widest">Skills</span>
+        <div className="w-full md:w-fit h-full flex flex-col mx-auto justify-center items-center">
+            <div className={`my-5 text-center`}>
+                <span className="text-white text-6xl tracking-wider">Skills</span>
             </div>
             <div className="w-fit max-w-[80%] lg:max-w-[70vw] h-fit flex flex-row justify-center items-center gap-3 overflow-hidden flex-wrap ">
             {SkillsArray.map((icon , key) => (

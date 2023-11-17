@@ -17,19 +17,28 @@ const Sidebar: NextPage = () => {
 
   console.log(Nav[0].name);
   return (
-    <div className="w-full h-full flex justify-center items-center ">
+    <div className="w-full h-full border-8 border-black/30">
       <div
-        className={`fixed top-7 right-7 transition-all duration-300  hover:scale-110 ${sidebarStatus ? 'z-10' : 'z-auto'}`}
+        className={`fixed top-7 right-7 transition-all duration-300 hover:scale-110 `}
         onMouseOver={() => {
           setSidebar(true);
           dispatch(toggleSidebar(true));
         }}
       >
         <div className="text-slate-200 w-10 h-10 flex justify-center items-center rounded-full">
-          {sidebar ? <span className="text-black"></span> : <Image alt="Menu" src={Menu}/>}
+          {sidebar ? <div className="text-black text-2xl font-[100]" onClick={()=> {
+            if(sidebar) {
+              setSidebar(false)
+              dispatch(toggleSidebar(false))
+            }
+          }}>
+            <span className="block lg:hidden">
+              &#x2715;
+            </span>
+          </div> : <Image alt="Menu" src={Menu}/>}
         </div>
       </div>
-      <ul className="flex flex-col w-full justify-center items-center backdrop-blur-md h-full" onMouseLeave={() => {
+      <ul className="flex flex-col w-full justify-center items-center bg-white h-full " onMouseLeave={() => {
         if(sidebar) {
           setSidebar(false)
           dispatch(toggleSidebar(false))
@@ -37,7 +46,7 @@ const Sidebar: NextPage = () => {
       }}>
         {Nav.map((item, index) => (
           <li key={index} onClick={() => {
-            setSidebar(!sidebar);
+            setSidebar(false);
             dispatch(toggleSidebar(!sidebar));
           }}>
             <Link href={`#${item.link}`}>

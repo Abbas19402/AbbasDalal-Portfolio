@@ -15,7 +15,7 @@ const MainLayout: NextPage<ScriptProps> = ({ children }) => {
                 <div className={`w-full transition-all duration-300  ${sidebarStatus ? 'w-full lg:w-[82vw]' : 'w-[100vw]'} overflow-y-auto h-full`}>
                     {children} 
                 </div>
-                <div className={`w-full md:max-w-[40vw] lg:max-w-[18vw] transition-all duration-300 bg-white/90 m-3 ${sidebarStatus ? 'w-full h-full lg:h-[50vh]' : 'w-0 h-0'} border-l-2 border-l-gray-300 overflow-hidden h-full right-0 top-0 fixed z-50`}>
+                <div className={`w-[100vw] md:max-w-[40vw] lg:max-w-[18vw] transition-all duration-300 ${sidebarStatus ? 'w-full h-full md:h-[20vh] lg:h-[50vh]' : 'w-0 h-[0vh] '} overflow-hidden right-0 top-0 fixed z-50`}>
                     <Sidebar />
                 </div>
             </div>

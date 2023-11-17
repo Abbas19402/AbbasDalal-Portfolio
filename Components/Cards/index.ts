@@ -1,7 +1,9 @@
 import ProjectCard from "./Projects"
+import ServiceCard from "./Services"
 
 const Cards = {
-    ProjectCard
+    ProjectCard,
+    ServiceCard
 }
 
 export default Cards
