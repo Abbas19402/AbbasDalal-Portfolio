@@ -47,10 +47,10 @@ const Sidebar: NextPage = () => {
         {Nav.map((item, index) => (
           <li key={index} onClick={() => {
             setSidebar(false);
-            dispatch(toggleSidebar(!sidebar));
+            dispatch(toggleSidebar(false));
           }}>
             <Link href={`#${item.link}`}>
-              <div className="m-2 transition-all hover:scale-110  group">
+              <div className="m-2 transition-all hover:scale-110 group">
                 <span className="text-gray-600 tracking-widest font-light group-hover:font-normal group-hover:text-black uppercase hover:drop-shadow-lg">
                   {item.name}
                 </span>
