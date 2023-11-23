@@ -27,7 +27,7 @@ const Landing: NextPage<ScriptProps> = () => {
                 <Services />
             </div>
             <div id="connect">
-                <Connect subject={router.query}/>
+                <Connect/>
             </div>
         </div>
     )

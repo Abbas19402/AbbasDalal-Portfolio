@@ -77,7 +77,7 @@ const mailHandler = async( req: NextApiRequest, res:NextApiResponse ) => {
             <body>
               <div class="container">
                 <header>
-                  <h1>Contact Form Submission</h1>
+                  <h1>Connection Request from Portfolio</h1>
                 </header>
                 <div class="message">
                   <p><strong>Name:</strong> ${firstName} ${lastName}</p>

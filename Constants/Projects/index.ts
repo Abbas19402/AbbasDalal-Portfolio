@@ -1,7 +1,3 @@
-import { StaticImageData } from "next/image"
-import Netflix from '../../public/Assets/Images/Projects/Netflix.png'
-import Revella from '../../public/Assets/Images/Projects/Revella.png'
-
 const ProjectsArray: { key: Number , title: String  , shortDesc: String , description: {point: String}[] , techUsed: {type: String , value: String}[] , gradient: { From: String , Via: String , To: String } , github: String}[] = [
     {
         key: 1,
