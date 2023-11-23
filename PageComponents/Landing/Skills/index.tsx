@@ -1,21 +1,14 @@
 import type { NextPage } from "next";
 import { ScriptProps } from "next/script";
-import { Lato , Roboto } from '@next/font/google'
 import Image from "next/image";
-import Styles from "../../../styles/Headings.module.css"
 
 import SkillsArray from "../../../Constants/Skills/Skills";
 
-const QuickSand = Roboto({
-    subsets: ['latin'],
-    weight: '500'
-})
-
-
 const Skills: NextPage<ScriptProps> = () => {
     console.log(SkillsArray[0].image)
+    
     return(
-        <div className="w-full md:w-fit h-full flex flex-col mx-auto justify-center items-center">
+        <div className="w-full md:w-[70vw] h-full flex flex-col mx-auto justify-center items-center">
             <div className={`my-5 text-center`}>
                 <span className="text-white text-6xl tracking-wider">Skills</span>
             </div>

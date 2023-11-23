@@ -5,9 +5,12 @@ import Head from 'next/head'
 
 import MainLayout from '../app/Home/layout'
 import Landing from '../PageComponents/Landing'
+import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
-
+  const router = useRouter();
+  
+  console.log(router);
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center">
       <Head>

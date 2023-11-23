@@ -9,64 +9,74 @@ import NextJS from "../../public/Assets/Images/Skills/nextjs.png"
 import NodeJS from "../../public/Assets/Images/Skills/nodejs.png"
 import Physics from "../../public/Assets/Images/Skills/physics.png"
 import MongoDB from "../../public/Assets/Images/Skills/mongodb.png"
-import ReactNative from "../../public/Assets/Images/Skills/react_native.png"
 import Typescript from "../../public/Assets/Images/Skills/typescript.png"
 
-const SkillsArray :{ key: Number , value: String , image: StaticImageData }[] = [
+const SkillsArray :{ key: Number , value: String , image: StaticImageData, type: String }[] = [
     {
         key: 1 ,
         value: 'C',
-        image: C
+        image: C,
+        type: 'programming'
     },
     {
         key: 1 ,
         value: 'C++',
-        image: CPlusPlus
+        image: CPlusPlus,
+        type: 'programming'
     },
     {
         key: 2 ,
         value: 'HTML',
-        image: HTML
+        image: HTML,
+        type: 'frontend'
     },
     {
         key: 3,
         value: 'CSS',
-        image: CSS
+        image: CSS,
+        type: 'frontend'
     },
     {
         key: 4,
         value: 'JavaScript',
-        image: JS
+        image: JS,
+        type: 'frontend'
     },
     {
         key: 5,
         value: 'TypeScript',
-        image: Typescript
+        image: Typescript,
+        type: 'frontend'
     },
     {
         key: 6,
         value: 'React',
-        image: Physics
+        image: Physics,
+        type: 'frontend'
     },
     {
         key: 7,
         value: 'NextJS',
-        image: NextJS
+        image: NextJS,
+        type: 'frontend'
     },
     {
         key: 8,
         value: 'Express',
-        image: Express
+        image: Express,
+        type: 'backend'
     },
     {
         key: 9,
         value: 'MongoDB',
-        image: MongoDB
+        image: MongoDB,
+        type: 'backend'
     },
     {
         key: 10,
         value: 'NodeJS',
-        image: NodeJS
+        image: NodeJS,
+        type: 'backend'
     },
 ]
 

@@ -19,7 +19,6 @@ const Projects: NextPage<ScriptProps> = () => {
                             key={key}
                             gradient={item.gradient}
                             title={item.title}
-                            imageSrc={item.image}
                             description={item.description}  
                             shortDesc={item.shortDesc}
                             techUsed={item.techUsed}

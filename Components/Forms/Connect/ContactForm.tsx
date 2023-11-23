@@ -2,46 +2,49 @@ import { FormEvent, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
 
-const ContactForm = () => {
+const ContactForm = ({ func }) => {
   const [agreed, setAgreed] = useState(false)
 
-  const ContactFormSubmission = (e:FormEvent<HTMLFormElement>) => {
+  const ContactFormSubmission = async(e:FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let values: { [key: string]: FormDataEntryValue } = {};
-    const form = new FormData(e.currentTarget);
-    for(var pair of form.entries()) {
-        values[pair[0]] = pair[1];
+    if(e.currentTarget) {
+      let values: { [key: string]: FormDataEntryValue } = {};
+      const form = new FormData(e.currentTarget);
+      for(var pair of form.entries()) {
+          values[pair[0]] = pair[1];
+      }
+      e.currentTarget.reset();
+      await func(values);
     }
-    console.log(values)
   }
 
   return (
     <div className="isolate bg-transparent px-6 lg:px-8">
-      <form onSubmit={ContactFormSubmission} className="mx-auto max-w-xl">
+      <form onSubmit={(e) => ContactFormSubmission(e)} className="mx-auto max-w-xl">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white">
+            <label htmlFor="firstName" className="block text-sm font-semibold leading-6 text-white">
               First name
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="first-name"
-                id="first-name"
+                name="firstName"
+                id="firstName"
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-2 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-transparent"
               />
             </div>
           </div>
           <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 bg-transparent text-white">
+            <label htmlFor="lastName" className="block text-sm font-semibold leading-6 bg-transparent text-white">
               Last name
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="last-name"
-                id="last-name"
+                name="lastName"
+                id="lastName"
                 autoComplete="family-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-2 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-transparent"
               />
