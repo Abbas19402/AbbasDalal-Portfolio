@@ -1,6 +1,4 @@
 import type { NextPage } from 'next'
-import { useState , useEffect , useRef } from 'react'
-import { useDispatch } from 'react-redux'
 import Head from 'next/head'
 
 import MainLayout from '../app/Home/layout'
@@ -10,7 +8,7 @@ import { useRouter } from 'next/router'
 const Home: NextPage = () => {
   const router = useRouter();
   
-  console.log(router);
+  console.log("Query: ",router.query);
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center">
       <Head>

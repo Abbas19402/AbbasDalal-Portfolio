@@ -1,6 +1,6 @@
 const services: {service: String, description: String, techUsed: String}[] = [
     {
-        service: "Web Development",
+        service: "Website Development",
         description: "Delivering authentic and timely web development services with a commitment to quality. Transforming ideas into digital reality, my portfolio showcases a track record of genuine and punctual service delivery.",
         techUsed: "Next.js, React.js, Node.js - MongoDB"
     },

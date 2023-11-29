@@ -12,7 +12,6 @@ const transporter = nodemailer.createTransport({
 const mailHandler = async( req: NextApiRequest, res:NextApiResponse ) => {
     if(req.method == 'POST') {
         const { firstName, lastName, email, message, subject } = req.body;
-        console.log(subject);
         const mailOption = {
             from: email,
             to: 'abbasali.dalal07@gmail.com',

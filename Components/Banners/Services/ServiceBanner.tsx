@@ -26,12 +26,7 @@ const ServiceBanner: React.FC<Props> = ({ title, description, list, animation, r
                             <li key={index}>{item.tech}</li>
                         ))}
                     </ul>
-                    <Link href={'/#connect'} onClick={() => {
-                        router.push({
-                            pathname: '/#connect',
-                            query: `Connection request regarding ${title}`
-                        },'/#connect')
-                    }} className="bg-white text-black px-4 py-1.5 rounded-md lg:font-bold my-2">Get in touch</Link>   
+                    <Link href={`/#connect?subject=${title}`}  className="bg-white text-black px-4 py-1.5 rounded-md lg:font-bold my-2">Get in touch</Link>   
                 </div>
                 <div className={`relative w-full md:w-[80%] lg:w-[35%] h-[30%] shrink-0 lg:h-[50%] overflow-hidden flex justify-center lg:py-20 lg:px-10 my-5`}>
                     <Lottie animationData={animation.animationData} loop={animation.loop}/>

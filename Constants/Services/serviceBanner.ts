@@ -8,7 +8,7 @@ const BannerServicesConstants: {service: String, description: String, techUsed: 
     {
         animation: {animationData: WebAnimation, loop: true},
         description: 'Web development involves creating and maintaining websites or applications. Developers use languages like HTML, CSS, and JavaScript to build functional and visually appealing online platforms for a positive user experience.',
-        service: 'Web Development',
+        service: 'Website Development',
         techUsed:[
             {tech: "React JS with and without Backend"},
             {tech: "Next JS with and without Backend"},
@@ -32,7 +32,7 @@ const BannerServicesConstants: {service: String, description: String, techUsed: 
             {tech: "Node JS"},
             {tech: "Express"},
             {tech: "MongoDB"},
-            {tech: "Bycrypt"}
+            {tech: "Bcrypt"}
         ]
     }
 ]

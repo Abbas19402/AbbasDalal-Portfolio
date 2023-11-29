@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
+import { toast } from 'react-toastify'
 
 const ContactForm = ({ func }) => {
   const [agreed, setAgreed] = useState(false)
@@ -15,6 +16,7 @@ const ContactForm = ({ func }) => {
       }
       e.currentTarget.reset();
       await func(values);
+      toast.success("Thanks for connecting!!")
     }
   }
 

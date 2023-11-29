@@ -3,6 +3,7 @@ import type { ScriptProps } from "next/script"
 import Sidebar from "../../Components/Navigation/Sidebar/Sidebar";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/Store";
+import { ToastContainer } from "react-toastify";
 
 const MainLayout: NextPage<ScriptProps> = ({ children }) => {
     const sidebarStatus = useSelector<RootState , Boolean>(state => state.transitions.sidebarStatus);
@@ -14,6 +15,7 @@ const MainLayout: NextPage<ScriptProps> = ({ children }) => {
             <div className="flex flex-row w-full h-full absolute justify-start items-start overflow-hidden">
                 <div className={`w-full transition-all duration-300  ${sidebarStatus ? 'w-full lg:w-[82vw]' : 'w-[100vw]'} overflow-y-auto h-full`}>
                     {children} 
+                    
                 </div>
                 <div className={`w-[100vw] md:max-w-[40vw] lg:max-w-[18vw] transition-all duration-300 ${sidebarStatus ? 'w-full h-full md:h-[20vh] lg:h-[50vh]' : 'w-0 h-[0vh] '} overflow-hidden right-0 top-0 fixed z-50`}>
                     <Sidebar />
