@@ -21,7 +21,7 @@ const ContactForm = ({ func }) => {
   }
 
   return (
-    <div className="isolate bg-transparent px-6 lg:px-8">
+    <div className="isolate bg-transparent ">
       <form onSubmit={(e) => ContactFormSubmission(e)} className="mx-auto max-w-xl">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>

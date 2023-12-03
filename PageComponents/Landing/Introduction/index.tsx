@@ -6,7 +6,10 @@ import { useLottie } from 'lottie-react'
 import { useSelector } from "react-redux";
 
 import CodeAnimation from '../../../public/Assets/Animations/Code4.json'
-import { RootState } from "../../../redux/Store";
+import { RootState } from "../../../redux/Store";   
+
+import dynamic from "next/dynamic";
+const DynamicLottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const neucha = Neucha({
   subsets: ['latin'],
@@ -15,11 +18,6 @@ const neucha = Neucha({
 
 const Introduction: NextPage<ScriptProps> = () => {
     const sidebarStatus = useSelector<RootState , Boolean>(state => state.transitions.sidebarStatus);
-    const option = {
-        animationData: CodeAnimation,
-        loop: true
-    }
-    const { View:LottieAnimation } = useLottie(option);
     return (
         <div className="w-full h-screen flex flex-col-reverse lg:flex-row justify-evenly items-center">
             <div className={`flex flex-col justify-center items-start ${!sidebarStatus ? 'w-full md:w-[80%] lg:w-[60%]' : 'w-full'} h-fit lg:h-[80%]  p-3 lg:p-10`}>
@@ -52,7 +50,7 @@ const Introduction: NextPage<ScriptProps> = () => {
             </div>
             
             <div className={`relative w-full md:w-[80%] lg:w-[35%] h-[30%] shrink-0 lg:h-[70%] overflow-hidden flex justify-center ${!sidebarStatus ? 'block' : 'hidden'}`}>
-                {LottieAnimation}
+                {typeof window !== 'undefined' && <DynamicLottie animationData={CodeAnimation} loop={true} />}
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-const services: {service: String, description: String, techUsed: String}[] = [
+const services: {service: string, description: String, techUsed: String}[] = [
     {
         service: "Website Development",
         description: "Delivering authentic and timely web development services with a commitment to quality. Transforming ideas into digital reality, my portfolio showcases a track record of genuine and punctual service delivery.",

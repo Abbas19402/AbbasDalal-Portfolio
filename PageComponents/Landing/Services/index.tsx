@@ -1,24 +1,18 @@
-import type { NextPage } from "next";
-import { ScriptProps } from "next/script";
-import { useLottie } from 'lottie-react'
 import Link from "next/link";
 
 import Button from "../../../Components/Buttons/Common/common_button";
 import CodeAnimation from '../../../public/Assets/Animations/serviceAnimation2.json'
 import Cards from "../../../Components/Cards";
 import services from "../../../Constants/Services/services";
+import dynamic from "next/dynamic";
 
-const Services: NextPage<ScriptProps> = () => {
-    const lottieOptions = {
-        animationData: CodeAnimation,
-        loop: true
-    }
+const DynamicLottie = dynamic(import('lottie-react'),{ssr: false})
 
-    const { View:ServicesAnimation } = useLottie(lottieOptions)
+const Services = ({ setSubject }) => {
     return(
         <div className="w-full h-fit ">
             <div className="w-full text-white mb-20 text-center">
-                <span className="text-6xl mx-auto tracking-wider">Checkout Services</span>
+                <span className="text-6xl mx-auto tracking-wider">Services</span>
             </div>
             <div className="w-full h-full flex flex-row">
                 <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-center w-full h-full py-10">
@@ -29,6 +23,7 @@ const Services: NextPage<ScriptProps> = () => {
                                 service={item.service} 
                                 description={item.description}
                                 techUsed={item.techUsed}
+                                setSubject={setSubject}
                             />
                         ))}
                         <Link href={'services'} className="lg:hidden block">
@@ -39,7 +34,7 @@ const Services: NextPage<ScriptProps> = () => {
                     </div>
                     <div className="w-[100vw] lg:min-w-[50vw] h-max flex flex-col justify-between items-center">
                         <div className="w-[70%] h-[70%]">
-                            {ServicesAnimation}
+                            <DynamicLottie animationData={CodeAnimation} loop={true}/>
                         </div>
                         <Link href={'services'} className="hidden lg:block">
                             <div className="w-full py-2 my-28">

@@ -1,9 +1,11 @@
 import ProjectCard from "./Projects"
 import ServiceCard from "./Services"
+import SkillCard from "./Skills/SkillCard"
 
 const Cards = {
     ProjectCard,
-    ServiceCard
+    ServiceCard,
+    SkillCard
 }
 
 export default Cards
