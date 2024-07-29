@@ -5,6 +5,8 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
 import Store from '../redux/Store'
 import { Rajdhani } from '@next/font/google'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const rajdhani = Rajdhani({
   subsets: ['latin'],
@@ -18,6 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Provider store={Store}>
         <PersistGate persistor={persistor}>
           <main className={`${rajdhani.className}`}>
+            <ToastContainer autoClose={3000} position='top-right' />
             <Component {...pageProps} />
           </main>
         </PersistGate>

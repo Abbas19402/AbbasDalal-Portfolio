@@ -22,7 +22,7 @@ const Skills: NextPage<ScriptProps> = () => {
           })
           .map((type, index) => (
             <div key={index} className="h-fit rounded-md mx-auto">
-              <div className="min-w-[16vw] w-[40vw] md:w-min h-10 text-white text-center rounded-md mb-5">
+              <div className="min-w-[16vw] w-[40vw] md:w-min h-10 text-white text-center rounded-md mb-5 mx-auto">
                 <span className="text-2xl capitalize tracking-wider">
                   {type}
                 </span>

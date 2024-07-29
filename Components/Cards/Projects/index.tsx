@@ -15,11 +15,11 @@ interface Props {
 const ProjectCard: React.FC<Props> = ({ gradient, description , shortDesc , techUsed ,title , github, imageSrc }) => {
     return(
         <div className="flex flex-col justify-between items-center">
-            <div className="rounded-[16px] bg-black flex flex-row gap-x-10 justify-between items-start mx-auto transition-all duration-700 w-full h-[80%]">
+            <div className="rounded-[16px] bg-black flex flex-col lg:flex-row gap-10 justify-between items-start mx-auto transition-all duration-700 w-full h-[80%]">
                     <div className="w-full flex flex-col lg:flex-row justify-between items-center h-full py-2">
                         <div className="h-full flex flex-col justify-between items-center ">
-                            <div className="flex md:flex-row flex-col justify-between items-center w-full">
-                                <div className={`bg-gradient-to-r from-${gradient.From} via-${gradient.Via} to--${gradient.To} bg-clip-text mb-5`}>
+                            <div className="flex md:flex-row flex-col justify-between lg:items-center w-full">
+                                <div className={`bg-gradient-to-r from-${gradient.From} via-${gradient.Via} to--${gradient.To} bg-clip-text mb-2`}>
                                     <span className="text-4xl text-transparent font-extrabold">{title}</span>
                                 </div>
                                 /
@@ -30,7 +30,7 @@ const ProjectCard: React.FC<Props> = ({ gradient, description , shortDesc , tech
                         </div>
                     </div>
                 
-                <div className="relative w-[90vw] h-[50vh] rounded-3xl overflow-hidden">
+                <div className="relative w-full lg:w-[90vw] h-[25vh] lg:h-[50vh] rounded-lg lg:rounded-3xl overflow-hidden">
                     <Image 
                         src={imageSrc?.src}
                         alt={`${title}`}
@@ -38,7 +38,7 @@ const ProjectCard: React.FC<Props> = ({ gradient, description , shortDesc , tech
                     />
                 </div>
             </div> 
-            <div className="w-full flex flex-row justify-between items-center my-5">
+            <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center gap-2 my-5">
                 <div className="h-full md:flex justify-end items-end group border rounded-md">
                     <Link href={`${github}`} target={`_blank`}>
                         <div className={`bg-transparent rounded py-0.5 px-3 transition-all group-hover:bg-slate-300 duration-700 group`}>
