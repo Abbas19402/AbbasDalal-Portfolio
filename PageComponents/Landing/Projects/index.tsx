@@ -3,7 +3,6 @@ import { ScriptProps } from "next/script";
 import { useEffect } from "react";
 import Cards from "../../../Components/Cards";
 import ProjectsArray from "../../../Constants/Projects";
-import Gradients from "../../../Components/Cards/Projects/randomGradientsGenerator";
 
 const Projects: NextPage<ScriptProps> = () => {
     useEffect(()=> {},[ProjectsArray])
@@ -11,10 +10,10 @@ const Projects: NextPage<ScriptProps> = () => {
         <div className="w-full h-fit relative overflow-hidden">
             <div className="w-full h-full flex flex-col justify-center items-center">
                 <div className="w-full p-2 text-center">
-                    <span className="text-white text-6xl tracking-wider">Projects</span>
+                    <span className="text-white text-6xl tracking-tight font-extrabold">Projects</span>
                 </div>
                 {ProjectsArray.map((item,key) => (
-                    <div className="my-5 w-full px-6 md:px-10 lg:px-40">
+                    <div className="my-16 w-full px-6 md:px-10 lg:px-40">
                         <Cards.ProjectCard
                             key={key}
                             gradient={item.gradient}
@@ -23,6 +22,7 @@ const Projects: NextPage<ScriptProps> = () => {
                             shortDesc={item.shortDesc}
                             techUsed={item.techUsed}
                             github={item.github}
+                            imageSrc={item.imageSrc}
                         />
                     </div>
                 ))}

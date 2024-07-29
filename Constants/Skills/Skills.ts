@@ -1,15 +1,16 @@
 import { StaticImageData } from "next/image"
 import C from "../../public/Assets/Images/Skills/C.png"
 import CPlusPlus from "../../public/Assets/Images/Skills/c++.png"
-import HTML from "../../public/Assets/Images/Skills/html.png"
-import CSS from "../../public/Assets/Images/Skills/css-3.png"
+import Flutter from "../../public/Assets/Images/Skills/flutter.png"
+import Dart from "../../public/Assets/Images/Skills/dart.png"
 import Express from "../../public/Assets/Images/Skills/express.png"
-import JS from "../../public/Assets/Images/Skills/Javascript.png"
+import Java from "../../public/Assets/Images/Skills/java.png"
 import NextJS from "../../public/Assets/Images/Skills/nextjs.png"
 import NodeJS from "../../public/Assets/Images/Skills/nodejs.png"
 import Physics from "../../public/Assets/Images/Skills/physics.png"
 import MongoDB from "../../public/Assets/Images/Skills/mongodb.png"
 import Typescript from "../../public/Assets/Images/Skills/typescript.png"
+import SpringBoot from "../../public/Assets/Images/Skills/springboot.png"
 
 const SkillsArray :{ key: Number , value: String , image: StaticImageData, type: String }[] = [
     {
@@ -19,64 +20,71 @@ const SkillsArray :{ key: Number , value: String , image: StaticImageData, type:
         type: 'programming'
     },
     {
-        key: 1 ,
+        key: 2 ,
         value: 'C++',
         image: CPlusPlus,
         type: 'programming'
     },
     {
-        key: 2 ,
-        value: 'HTML',
-        image: HTML,
-        type: 'frontend'
-    },
-    {
         key: 3,
-        value: 'CSS',
-        image: CSS,
-        type: 'frontend'
+        value: 'TypeScript',
+        image: Typescript,
+        type: 'programming'
     },
     {
         key: 4,
-        value: 'JavaScript',
-        image: JS,
-        type: 'frontend'
+        value: 'Dart',
+        image: Dart,
+        type: 'programming'
     },
+
     {
         key: 5,
-        value: 'TypeScript',
-        image: Typescript,
-        type: 'frontend'
+        value: 'Java',
+        image: Java,
+        type: 'programming'
     },
     {
         key: 6,
         value: 'React',
         image: Physics,
-        type: 'frontend'
+        type: 'client tech'
     },
     {
         key: 7,
         value: 'NextJS',
         image: NextJS,
-        type: 'frontend'
+        type: 'client tech'
     },
     {
         key: 8,
-        value: 'Express',
-        image: Express,
-        type: 'backend'
+        value: 'Flutter',
+        image: Flutter,
+        type: 'client tech'
     },
     {
         key: 9,
-        value: 'MongoDB',
-        image: MongoDB,
-        type: 'backend'
+        value: 'Express',
+        image: Express,
+        type: 'server tools'
     },
     {
         key: 10,
+        value: 'MongoDB',
+        image: MongoDB,
+        type: 'server tools'
+    },
+    {
+        key: 11,
         value: 'NodeJS',
         image: NodeJS,
-        type: 'backend'
+        type: 'server tools'
+    },
+    {
+        key: 12,
+        value: 'Springboot',
+        image: SpringBoot,
+        type: 'server tools'
     },
 ]
 
