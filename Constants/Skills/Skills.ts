@@ -7,7 +7,7 @@ import Express from "../../public/Assets/Images/Skills/express.png"
 import Java from "../../public/Assets/Images/Skills/java.png"
 import NextJS from "../../public/Assets/Images/Skills/nextjs.png"
 import NodeJS from "../../public/Assets/Images/Skills/nodejs.png"
-import Physics from "../../public/Assets/Images/Skills/physics.png"
+import React from "../../public/Assets/Images/Skills/physics.png"
 import MongoDB from "../../public/Assets/Images/Skills/mongodb.png"
 import Typescript from "../../public/Assets/Images/Skills/typescript.png"
 import SpringBoot from "../../public/Assets/Images/Skills/springboot.png"
@@ -47,7 +47,7 @@ const SkillsArray :{ key: Number , value: String , image: StaticImageData, type:
     {
         key: 6,
         value: 'React',
-        image: Physics,
+        image: React,
         type: 'client tech'
     },
     {
@@ -66,26 +66,32 @@ const SkillsArray :{ key: Number , value: String , image: StaticImageData, type:
         key: 9,
         value: 'Express',
         image: Express,
-        type: 'server tools'
+        type: 'backend tech'
     },
     {
         key: 10,
         value: 'MongoDB',
         image: MongoDB,
-        type: 'server tools'
+        type: 'backend tech'
     },
     {
         key: 11,
         value: 'NodeJS',
         image: NodeJS,
-        type: 'server tools'
+        type: 'backend tech'
     },
     {
         key: 12,
         value: 'Springboot',
         image: SpringBoot,
-        type: 'server tools'
+        type: 'backend tech'
     },
+    {
+        key: 13,
+        value: "React Native",
+        image: React,
+        type: "client tech"
+    }
 ]
 
 export default SkillsArray

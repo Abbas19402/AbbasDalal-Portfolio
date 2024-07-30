@@ -12,7 +12,7 @@ const Services = ({ setSubject }) => {
     return(
         <div className="w-full h-fit ">
             <div className="w-full text-white mb-20 text-center">
-                <span className="text-6xl mx-auto tracking-wider">Services</span>
+                <span className="text-white text-6xl tracking-tight font-extrabold">Services</span>
             </div>
             <div className="w-full h-full flex flex-row">
                 <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-center w-full h-full py-10">

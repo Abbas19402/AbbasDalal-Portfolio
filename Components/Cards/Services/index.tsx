@@ -21,7 +21,7 @@ const ServiceCard: React.FC<Props> = ({ service, description, techUsed, setSubje
                             query: `Connection request regarding ${service}`,
                         },'/#connect')
                         setSubject(service)
-                    }} className="bg-white text-black px-4 py-2 rounded-lg lg:font-bold">Get in touch</div>
+                    }} className="bg-white text-black px-4 py-2 rounded-lg lg:font-bold hover:cursor-pointer">Get in touch</div>
                     <p className="text-sm">{techUsed}</p>
                 </div>
             </div>

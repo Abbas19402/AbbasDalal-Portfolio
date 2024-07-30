@@ -10,7 +10,7 @@ const Skills: NextPage<ScriptProps> = () => {
   return (
     <div className="w-full md:w-[70vw] h-full flex flex-col mx-auto justify-center items-center">
       <div className={`my-5 text-center`}>
-        <span className="text-white text-6xl tracking-tight font-extrabold">My Tech Stack</span>
+        <span className="text-white text-6xl tracking-tight font-extrabold">Tech Stack</span>
       </div>
       <div className="w-full lg:max-w-[70vw] overflow-hidden flex flex-row gap-10 flex-wrap justify-start items-start">
         {[...Array(SkillsArray.length)]
