@@ -1,6 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { Abel } from "@next/font/google"
 
 interface Props {
     gradient: {From: String, Via: String, To: String},
@@ -12,15 +13,19 @@ interface Props {
     imageSrc: StaticImageData
 }
 
+const customFont = Abel({
+    subsets: ['latin'],
+    weight: '400'
+})
+
 const ProjectCard: React.FC<Props> = ({ gradient, description , shortDesc , techUsed ,title , github, imageSrc }) => {
-    console.log(gradient)
     return(
         <div className="flex flex-col justify-between items-center">
             <div className="rounded-[16px] bg-black flex flex-col lg:flex-row gap-10 justify-between items-start mx-auto transition-all duration-700 w-full h-[80%]">
                     <div className="w-full flex flex-col lg:flex-row justify-between items-center h-full py-2">
                         <div className="h-full flex flex-col justify-between items-center ">
                             <div className="flex md:flex-row flex-col justify-between lg:items-center w-full">
-                                <div className={`bg-gradient-to-r from-${gradient.From} via-${gradient.Via} to-${gradient.To} bg-clip-text mb-2`}>
+                                <div className={`${customFont.className} bg-gradient-to-b from-neutral-800 via-neutral-400/50 to-neutral-600 bg-clip-text mb-2`}>
                                     <span className="text-4xl text-transparent font-extrabold">{title}</span>
                                 </div>
                                 /

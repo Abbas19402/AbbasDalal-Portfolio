@@ -13,9 +13,8 @@ const Projects: NextPage<ScriptProps> = () => {
                     <span className="text-white text-6xl tracking-tight font-extrabold">Projects</span>
                 </div>
                 {ProjectsArray.map((item,key) => (
-                    <div className="my-16 w-full px-10 lg:px-40">
+                    <div key={key} className="my-16 w-full px-10 lg:px-40">
                         <Cards.ProjectCard
-                            key={key}
                             gradient={item.gradient}
                             title={item.title}
                             description={item.description}  
