@@ -5,15 +5,14 @@ import CodeAnimation from '../../../public/Assets/Animations/serviceAnimation2.j
 import Cards from "../../../Components/Cards";
 import services from "../../../Constants/Services/services";
 import dynamic from "next/dynamic";
+import Heading from "../../../Components/Typography/Heading";
 
 const DynamicLottie = dynamic(import('lottie-react'),{ssr: false})
 
 const Services = ({ setSubject }) => {
     return(
         <div className="w-full h-fit ">
-            <div className="w-full text-white mb-20 text-center">
-                <span className="text-white text-6xl tracking-tight font-extrabold">Services</span>
-            </div>
+            <Heading heading={'Services'}/>
             <div className="w-full h-full flex flex-row">
                 <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-center w-full h-full py-10">
                     <div className="w-[100vw] h-full flex flex-col justify-center items-center gap-10">

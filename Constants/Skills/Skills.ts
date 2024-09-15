@@ -15,13 +15,7 @@ import SpringBoot from "../../public/Assets/Images/Skills/springboot.png"
 const SkillsArray :{ key: Number , value: String , image: StaticImageData, type: String }[] = [
     {
         key: 1 ,
-        value: 'C',
-        image: C,
-        type: 'programming'
-    },
-    {
-        key: 2 ,
-        value: 'C++',
+        value: 'C/C++',
         image: CPlusPlus,
         type: 'programming'
     },

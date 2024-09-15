@@ -40,7 +40,7 @@ const Connect = ({ subject }) => {
                         router.push('mailto:abbasali.dalal07@gmail.com')
                     }} className="w-full lg:w-80 h-16 rounded-lg  border-2 bg-white/10 hover:bg-transparent border-transparent hover:border-white flex flex-row justify-between items-center px-5 hover:cursor-pointer">
                         <Image src={Mail} alt="phone" width={30} height={30}/>
-                        <span className="tracking-wider text-white text-md">abbasali.dalal07@gmail.com</span>
+                        <span className="tracking-tight text-white text-md">abbasali.dalal07@gmail.com</span>
                     </div>
                     <div className="w-full lg:w-80 h-16 rounded-lg border-2 bg-white/10 hover:bg-transparent border-transparent hover:border-white flex flex-row justify-between items-center px-5 hover:cursor-pointer">
                         <Image src={Location} alt="phone" width={30} height={30}/>

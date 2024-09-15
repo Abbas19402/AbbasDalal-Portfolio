@@ -1,7 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { Abel } from "@next/font/google"
+import { Abel, Advent_Pro } from "@next/font/google"
 
 interface Props {
     gradient: {From: String, Via: String, To: String},
@@ -13,7 +13,7 @@ interface Props {
     imageSrc: StaticImageData
 }
 
-const customFont = Abel({
+const customFont = Advent_Pro({
     subsets: ['latin'],
     weight: '400'
 })
@@ -25,12 +25,11 @@ const ProjectCard: React.FC<Props> = ({ gradient, description , shortDesc , tech
                     <div className="w-full flex flex-col lg:flex-row justify-between items-center h-full py-2">
                         <div className="h-full flex flex-col justify-between items-center ">
                             <div className="flex md:flex-row flex-col justify-between lg:items-center w-full">
-                                <div className={`${customFont.className} bg-gradient-to-b from-neutral-800 via-neutral-400/50 to-neutral-600 bg-clip-text mb-2`}>
-                                    <span className="text-4xl text-transparent font-extrabold">{title}</span>
+                                <div className={`${customFont.className} mb-2`}>
+                                    <span className="text-4xl text-sky-700 font-extrabold">{title}</span>
                                 </div>
-                                /
                             </div>
-                            <div className="w-full text-md font-semibold text-justify">
+                            <div className="w-full text-md font-light text-justify">
                                 <span className="text-white/80 text-lg tracking-wide">{description[0].point}</span>
                             </div>
                         </div>
@@ -55,7 +54,7 @@ const ProjectCard: React.FC<Props> = ({ gradient, description , shortDesc , tech
                 <div className="h-fit py-2">
                     <div className="h-fit w-fit flex flex-row flex-wrap gap-7 justify-start items-center my-1">
                         {techUsed.map((item,index)=> (
-                            <div key={index} className={`bg-slate-800 py-0.5 px-2 rounded-full`}>
+                            <div key={index} className={`py-0.5 px-2 rounded-full`}>
                                 <span className="text-sm font-medium text-white tracking-widest">{item.value}</span>
                             </div>
                         ))}

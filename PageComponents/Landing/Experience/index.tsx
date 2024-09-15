@@ -18,7 +18,7 @@ const Experience: NextPage<ScriptProps> = () => {
                 <div className="w-[60%] h-full flex flex-col items-center justify-center gap-3">
                 {/* Name */}
                 <div className="w-full text-left px-5">
-                    <span className="text-5xl text-white tracking-wide font-bold">
+                    <span className="text-5xl text-white tracking-wide font-light">
                     Websenor
                     </span>
                 </div>
