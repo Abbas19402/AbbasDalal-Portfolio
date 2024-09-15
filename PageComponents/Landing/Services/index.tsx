@@ -27,7 +27,7 @@ const Services = ({ setSubject }) => {
                         ))}
                         <Link href={'services'} className="lg:hidden block">
                             <div className="w-full py-2">
-                                <Button Title={'Check out all of my Services'} Background={'bg-gray-200'} TextColor={'text-gray-800'} />  
+                                <div className="bg-white text-black px-4 py-2 rounded-lg lg:font-light hover:cursor-pointer">More</div>  
                             </div>
                         </Link>
                     </div>

@@ -9,16 +9,16 @@ interface Props {
 }  
 
 const font = Advent_Pro({
-    subsets: ['cyrillic'],
-    weight: ['400']
+    subsets: ['latin'],
+    weight: '800'
 })
 
 const ServiceCard: React.FC<Props> = ({ service, description, techUsed, setSubject }) => {
     const router = useRouter()
     return (
         <div className="max-w-sm mx-auto bg-black text-white shadow-lg rounded-lg overflow-hidden my-3">
-            <div className="p-6 bg-white/10 flex flex-col justify-between items-start">
-                <div className={`font-bold text-sky-700 text-xl mb-2 ${font.className} tracking-widest`}>{service}</div>
+            <div className="p-6 bg-white/0 flex flex-col justify-between items-start">
+                <div className={`font-bold text-orange-500 text-xl mb-2 ${font.className} tracking-widest`}>{service}</div>
                 <p className="font-light text-sm leading-6 tracking-wide mb-4 text-start">{description}</p>
                 <div className="flex items-center justify-between">
                     <div onClick={() => {

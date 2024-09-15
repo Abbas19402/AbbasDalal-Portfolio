@@ -26,7 +26,7 @@ const ProjectCard: React.FC<Props> = ({ gradient, description , shortDesc , tech
                         <div className="h-full flex flex-col justify-between items-center ">
                             <div className="flex md:flex-row flex-col justify-between lg:items-center w-full">
                                 <div className={`${customFont.className} mb-2`}>
-                                    <span className="text-4xl text-sky-700 font-extrabold">{title}</span>
+                                    <span className="text-4xl text-orange-500 font-extrabold">{title}</span>
                                 </div>
                             </div>
                             <div className="w-full text-md font-light text-justify">
