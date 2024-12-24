@@ -75,7 +75,7 @@ const ProjectsArray: { key: Number , title: String  , shortDesc: String , descri
             Via: 'green-200',
             To: 'green-500'
         },
-        github: 'https://github.com/Abbas19402/MLSU-App',
+        github: 'https://github.com/Abbas19402/aad-billing-management',
         imageSrc: BillingMS
     }
 ]
