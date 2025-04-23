@@ -48,7 +48,7 @@ const Connect = ({ subject }) => {
                     </div>
                 </div>
                 <div className="my-10 lg:mx-20 mx-0 flex justify-between items-center w-full lg:px-0 lg:w-80 gap-x-4">
-                    <Link href={'https://www.instagram.com/abbas_19402/'} target={'_blank'}  className="rounded-2xl h-14 w-14 flex flex-row justify-center items-center relative border-2 bg-white/10 hover:bg-transparent border-transparent hover:border-white">
+                    <Link href={'/'} target={'_blank'}  className="rounded-2xl h-14 w-14 flex flex-row justify-center items-center relative border-2 bg-white/10 hover:bg-transparent border-transparent hover:border-white">
                         <Image src={Instagram} alt="phone" width={30} height={30}/>
                     </Link>
                     <Link href={'https://github.com/Abbas19402'} target={'_blank'} className="rounded-2xl h-14 w-14 border-2 flex flex-row justify-center items-center relative bg-white/10 hover:bg-transparent border-transparent hover:border-white">
