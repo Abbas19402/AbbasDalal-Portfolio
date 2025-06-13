@@ -18,70 +18,62 @@ const ContactForm = ({ func }) => {
   }
 
   return (
-    <div className="isolate bg-transparent ">
-      <form onSubmit={(e) => ContactFormSubmission(e)} className="mx-auto max-w-xl">
+    <div className="isolate bg-transparent">
+      <form onSubmit={(e) => ContactFormSubmission(e)} className="mx-auto max-w-xl bg-white/5 border border-white/10 rounded-2xl shadow-lg backdrop-blur p-8 flex flex-col gap-6">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="firstName" className="block text-sm font-semibold leading-6 text-white">
+            <label htmlFor="firstName" className="block text-sm font-semibold text-white/70 mb-2">
               First name
             </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="firstName"
-                id="firstName"
-                autoComplete="given-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-2 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-transparent"
-              />
-            </div>
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              autoComplete="given-name"
+              className="block w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2 text-white placeholder-white/60 shadow-sm backdrop-blur focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400 transition-all duration-300"
+            />
           </div>
           <div>
-            <label htmlFor="lastName" className="block text-sm font-semibold leading-6 bg-transparent text-white">
+            <label htmlFor="lastName" className="block text-sm font-semibold text-white/70 mb-2">
               Last name
             </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="lastName"
-                id="lastName"
-                autoComplete="family-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-2 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-transparent"
-              />
-            </div>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              autoComplete="family-name"
+              className="block w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2 text-white placeholder-white/60 shadow-sm backdrop-blur focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400 transition-all duration-300"
+            />
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 bg-transparent text-white">
+            <label htmlFor="email" className="block text-sm font-semibold text-white/70 mb-2">
               Email
             </label>
-            <div className="mt-2.5">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                autoComplete="email"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-2 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-transparent"
-              />
-            </div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autoComplete="email"
+              className="block w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2 text-white placeholder-white/60 shadow-sm backdrop-blur focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400 transition-all duration-300"
+            />
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">
+            <label htmlFor="message" className="block text-sm font-semibold text-white/70 mb-2">
               Message
             </label>
-            <div className="mt-2.5">
-              <textarea
-                name="message"
-                id="message"
-                rows={4}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-2 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-transparent"
-                defaultValue={''}
-              />
-            </div>
+            <textarea
+              name="message"
+              id="message"
+              rows={4}
+              className="block w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2 text-white placeholder-white/60 shadow-sm backdrop-blur focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400 transition-all duration-300"
+              defaultValue={''}
+            />
           </div>
         </div>
-        <div className="mt-10">
+        <div className="mt-6">
           <button
             type="submit"
-            className="block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold text-black shadow-sm hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="block w-full rounded-lg bg-white/20 border border-white/20 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-md backdrop-blur hover:bg-indigo-500/80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-300"
           >
             Let's talk
           </button>

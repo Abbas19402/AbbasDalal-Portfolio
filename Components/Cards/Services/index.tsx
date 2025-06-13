@@ -16,18 +16,23 @@ const font = Advent_Pro({
 const ServiceCard: React.FC<Props> = ({ service, description, techUsed, setSubject }) => {
     const router = useRouter()
     return (
-        <div className="max-w-sm mx-auto bg-black text-white shadow-lg rounded-lg overflow-hidden my-3">
-            <div className="p-6 bg-white/0 flex flex-col justify-between items-start">
-                <div className={`font-bold text-orange-500 text-xl mb-2 ${font.className} tracking-widest`}>{service}</div>
-                <p className="font-light text-sm leading-6 tracking-wide mb-4 text-start">{description}</p>
-                <div className="flex items-center justify-between">
+        <div className="w-full bg-white/10 backdrop-blur-md shadow-lg rounded-2xl overflow-hidden transition-all duration-500 hover:bg-white/20 hover:shadow-2xl hover:border-indigo-400/60 hover:border-2 border border-white/10 group cursor-pointer">
+            <div className="p-8 flex flex-col justify-between items-start gap-4">
+                <div className={`font-bold text-indigo-300 text-2xl mb-1 ${font.className} tracking-widest group-hover:text-indigo-200 transition-colors duration-300`}>{service}</div>
+                <p className="font-light text-base leading-6 tracking-wide mb-2 text-white/90 text-start">{description}</p>
+                <div className="flex flex-wrap gap-2 mb-3">
+                    {techUsed.split(',').map((tech, idx) => (
+                        <span key={idx} className="px-3 py-1 text-xs font-medium text-white bg-indigo-500/20 rounded-full border border-indigo-400/30">{tech.trim()}</span>
+                    ))}
+                </div>
+                <div className="flex items-center justify-between w-full">
                     <div onClick={() => {
                         router.push({
                             pathname: '/#connect',
                             query: `Connection request regarding ${service}`,
                         },'/#connect')
                         setSubject(service)
-                    }} className="bg-white text-black px-4 py-2 rounded-lg lg:font-light hover:cursor-pointer">Get in touch</div>
+                    }} className="bg-indigo-400 text-white px-4 py-2 rounded-lg font-semibold hover:bg-indigo-500 transition-colors duration-300 hover:cursor-pointer">Get in touch</div>
                 </div>
             </div>
         </div>

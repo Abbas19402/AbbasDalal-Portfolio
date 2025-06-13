@@ -1,49 +1,41 @@
-import Link from "next/link";
-
-import Button from "../../../Components/Buttons/Common/common_button";
-import CodeAnimation from '../../../public/Assets/Animations/serviceAnimation2.json'
-import Cards from "../../../Components/Cards";
 import services from "../../../Constants/Services/services";
-import dynamic from "next/dynamic";
 import Heading from "../../../Components/Typography/Heading";
 
-const DynamicLottie = dynamic(import('lottie-react'),{ssr: false})
+const serviceSvgs = [
+    // Website Development
+    <svg key="web" className="w-8 h-8 text-indigo-300 mb-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" className="fill-white/10"/><path d="M3 9h18" stroke="currentColor" strokeWidth="2"/><circle cx="7" cy="7" r="1" fill="currentColor"/><circle cx="11" cy="7" r="1" fill="currentColor"/></svg>,
+    // Mobile App Development
+    <svg key="mobile" className="w-8 h-8 text-indigo-300 mb-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2" className="fill-white/10"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg>,
+    // Backend API Development
+    <svg key="api" className="w-8 h-8 text-indigo-300 mb-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" className="fill-white/10"/><path d="M8 12h8M12 8v8" stroke="currentColor" strokeWidth="2"/></svg>,
+    // UI/UX Consulting
+    <svg key="uiux" className="w-8 h-8 text-indigo-300 mb-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="2" className="fill-white/10"/><circle cx="8" cy="12" r="2" fill="currentColor"/><rect x="14" y="10" width="4" height="4" rx="1" fill="currentColor"/></svg>
+];
 
-const Services = ({ setSubject }) => {
+const Services = () => {
     return(
-        <div className="w-full h-fit ">
-            <Heading heading={'Services'}/>
-            <div className="w-full h-full flex flex-row">
-                <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-center w-full h-full py-10">
-                    <div className="w-[100vw] h-full flex flex-col justify-center items-center gap-10">
-                        {services.map((item,key)=> (
-                            <Cards.ServiceCard
-                                key={key}
-                                service={item.service} 
-                                description={item.description}
-                                techUsed={item.techUsed}
-                                setSubject={setSubject}
-                            />
-                        ))}
-                        <Link href={'services'} className="lg:hidden block">
-                            <div className="w-full py-2">
-                                <div className="bg-white text-black px-4 py-2 rounded-lg lg:font-light hover:cursor-pointer">More</div>  
+        <section className="w-full min-h-screen flex flex-col items-center py-24 px-4">
+            <div className="w-full max-w-6xl mx-auto flex flex-col items-center gap-8">
+                <Heading heading={'Services'} />
+                <p className="text-white/70 text-center text-lg max-w-2xl mb-8 font-light">I offer a range of services to help you build, launch, and grow your digital products. Each service is tailored to deliver maximum value and quality.</p>
+                <div className="w-full grid grid-cols-1 gap-12 lg:grid-cols-2 justify-center">
+                    {services.map((item, key) => (
+                        <div key={key} className="w-full max-w-2xl mx-auto bg-white/5 border border-white/10 rounded-2xl shadow-lg p-8 flex flex-col gap-4 hover:shadow-2xl hover:border-indigo-400/40 transition-all duration-300">
+                            <div className="flex flex-row gap-2 items-center">
+                                <div className="w-fit h-10 flex items-center justify-start">{serviceSvgs[key % serviceSvgs.length]}</div>
+                                <h3 className="text-xl font-bold text-indigo-200 mb-2 tracking-wide">{item.service}</h3>
                             </div>
-                        </Link>
-                    </div>
-                    <div className="w-[100vw] lg:min-w-[50vw] h-max flex flex-col justify-between items-center">
-                        <div className="w-[70%] h-[70%]">
-                            <DynamicLottie animationData={CodeAnimation} loop={true}/>
+                            <p className="text-white/80 text-base font-light leading-relaxed mb-2">{item.description}</p>
+                            <div className="flex flex-wrap gap-2 mt-auto">
+                                {item.techUsed.split(',').map((tech, idx) => (
+                                    <span key={idx} className="px-3 py-1 text-xs font-medium text-indigo-100 bg-indigo-500/10 rounded-full border border-indigo-400/20">{tech.trim()}</span>
+                                ))}
+                            </div>
                         </div>
-                        <Link href={'services'} className="hidden lg:block">
-                            <div className="w-full py-2 my-28">
-                                <Button Title={'Check out my Services'} Background={'bg-gray-200'} TextColor={'text-gray-800'} />  
-                            </div>
-                        </Link>
-                    </div>
+                    ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

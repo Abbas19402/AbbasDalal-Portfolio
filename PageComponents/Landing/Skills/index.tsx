@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import { ScriptProps } from "next/script";
-import Image from "next/image";
-
 import SkillsArray from "../../../Constants/Skills/Skills";
 import Cards from "../../../Components/Cards";
 import Styles from '../../../styles/rmScrollbar.module.css'
@@ -15,40 +13,33 @@ const font = Advent_Pro({
 
 const Skills: NextPage<ScriptProps> = () => {
   return (
-    <div className="w-full md:w-[70vw] min-h-screen flex flex-col mx-auto justify-evenly items-center">
-      <Heading heading={'Tech Stack'} />
-      <div className="w-full lg:max-w-[70vw] overflow-hidden flex flex-row gap-10 flex-wrap justify-start items-start">
-        {[...Array(SkillsArray.length)]
-          .map((_, key) => {
-            return Object.values(SkillsArray)[key].type;
-          })
-          .filter((value, index, self) => {
-            return self.indexOf(value) === index;
-          })
-          .map((type, index) => (
-            <div key={index} className="h-fit rounded-md mx-auto">
-              <div className="min-w-[16vw] w-[70vw] px-5 md:w-min h-10 text-orange-500 text-start lg:text-center rounded-md mb-5 mx-auto">
-                <span className={`text-2xl capitalize font-bold tracking-wider ${font.className}`}>
-                  {type}
-                </span>
+    <section className="w-full min-h-screen flex flex-col items-center py-24 px-4">
+      <div className="w-full max-w-6xl mx-auto flex flex-col items-center gap-8">
+        <Heading heading={'Tech Stack'} />
+        <p className="text-white/70 text-center text-lg max-w-2xl mb-8 font-light">My expertise spans across various technologies and frameworks, allowing me to build robust and scalable solutions.</p>
+        <div className="w-full flex flex-col gap-12">
+          {[...Array(SkillsArray.length)]
+            .map((_, key) => Object.values(SkillsArray)[key].type)
+            .filter((value, index, self) => self.indexOf(value) === index)
+            .map((type, index) => (
+              <div key={index} className="w-full rounded-2xl bg-white/5 border border-white/10 shadow-lg p-8 flex flex-col gap-8">
+                <div className="mb-6">
+                  <span className={`text-2xl capitalize font-bold tracking-wider text-white border-b-4 border-indigo-500 pb-1 ${font.className}`}>{type}</span>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                  {SkillsArray.filter(item => item.type === type).map((item, key) => (
+                    <Cards.SkillCard
+                      key={key}
+                      iconSrc={item.image.src}
+                      skillName={item.value}
+                    />
+                  ))}
+                </div>
               </div>
-
-              <div className={`px-5 w-full h-fit flex flex-col justify-start items-center gap-y-5 gap-x-2 overflow-x-scroll ${Styles.noScroll} lg:overflow-x-visible lg:flex-wrap px-2 py-1 rounded-lg`}>
-                {SkillsArray.map(
-                  (item, key) =>
-                    item.type == type && (
-                      <Cards.SkillCard
-                        key={key}
-                        iconSrc={item.image.src}
-                        skillName={item.value}
-                      />
-                    )
-                )}
-              </div>
-            </div>
-          ))}
+            ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
