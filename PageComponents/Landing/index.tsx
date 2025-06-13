@@ -17,7 +17,7 @@ const Landing: NextPage<ScriptProps> = () => {
     const [ subject, setSubject ] = useState<Props['subject']>('');
     useEffect(()=> {console.log(subject)},[subject])
     return(
-        <div className={`h-full scroll-smooth overflow-y-auto ${Styles.noScroll} flex flex-col relative min-h-screen`}
+        <div className={`h-full scroll-smooth overflow-y-auto ${Styles.noScroll} flex flex-col relative min-h-screen px-4 sm:px-8 lg:px-16 py-4 sm:py-8 lg:py-12`}
             style={{
                 background: "radial-gradient(ellipse at top left, rgba(67,56,202,0.12) 0%, transparent 60%), linear-gradient(135deg, #18181b 0%, #23272f 100%)",
                 backdropFilter: "blur(8px)",
