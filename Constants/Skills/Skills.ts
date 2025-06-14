@@ -14,12 +14,6 @@ import SpringBoot from "../../public/Assets/Images/Skills/springboot.png"
 
 const SkillsArray :{ key: Number , value: String , image: StaticImageData, type: String }[] = [
     {
-        key: 1 ,
-        value: 'C/C++',
-        image: CPlusPlus,
-        type: 'programming'
-    },
-    {
         key: 3,
         value: 'TypeScript',
         image: Typescript,
@@ -42,49 +36,49 @@ const SkillsArray :{ key: Number , value: String , image: StaticImageData, type:
         key: 6,
         value: 'React',
         image: React,
-        type: 'client tech'
+        type: 'frontend'
     },
     {
         key: 7,
         value: 'NextJS',
         image: NextJS,
-        type: 'client tech'
+        type: 'frontend'
     },
     {
         key: 8,
         value: 'Flutter',
         image: Flutter,
-        type: 'client tech'
+        type: 'frontend'
     },
     {
         key: 9,
         value: 'Express',
         image: Express,
-        type: 'backend tech'
+        type: 'backend'
     },
     {
         key: 10,
         value: 'MongoDB',
         image: MongoDB,
-        type: 'backend tech'
+        type: 'backend'
     },
     {
         key: 11,
         value: 'NodeJS',
         image: NodeJS,
-        type: 'backend tech'
+        type: 'backend'
     },
     {
         key: 12,
         value: 'Springboot',
         image: SpringBoot,
-        type: 'backend tech'
+        type: 'backend'
     },
     {
         key: 13,
         value: "React Native",
         image: React,
-        type: "client tech"
+        type: "frontend"
     }
 ]
 

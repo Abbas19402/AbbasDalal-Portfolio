@@ -19,7 +19,7 @@ const SkillCard: React.FC<Props> = ({ skillName, iconSrc }) => {
                 <div className="text-base font-medium tracking-wide text-white/90 group-hover:text-white transition-colors duration-300">
                     {skillName}
                 </div>
-                <div className="h-12 w-12 flex items-center justify-center relative rounded-lg overflow-hidden bg-white/10 group-hover:bg-white/20 transition-all duration-300">
+                <div className="h-12 w-12 flex items-center justify-center relative rounded-lg overflow-hidden group-hover:bg-white transition-all duration-700">
                     <Image
                         alt={`${skillName}`}
                         src={`${iconSrc}`}
