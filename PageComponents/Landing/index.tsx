@@ -17,25 +17,25 @@ const Landing: NextPage<ScriptProps> = () => {
     const [ subject, setSubject ] = useState<Props['subject']>('');
     useEffect(()=> {console.log(subject)},[subject])
     return(
-        <div className={`h-full scroll-smooth overflow-y-auto ${Styles.noScroll} flex flex-col relative min-h-screen px-4 sm:px-8 lg:px-16 py-4 sm:py-8 lg:py-12`}
+        <div className={`h-full scroll-smooth overflow-y-auto ${Styles.noScroll} flex flex-col relative min-h-screen`}
             style={{
                 background: "radial-gradient(ellipse at top left, rgba(67,56,202,0.12) 0%, transparent 60%), linear-gradient(135deg, #18181b 0%, #23272f 100%)",
                 backdropFilter: "blur(8px)",
             }}
         >
-            <div id="home">
+            <div id="home" className="px-4 sm:px-8 lg:px-16 py-4 sm:py-8 lg:py-12">
                 <Introduction/>
             </div>
-            <div id="skills">
+            <div id="skills" className="px-4 sm:px-8 lg:px-16 py-4 sm:py-8 lg:py-12">
                 <Skills />
             </div>
-            <div id="projects">
+            <div id="projects" className="px-4 sm:px-8 lg:px-16 py-4 sm:py-8 lg:py-12">
                 <Projects />
             </div>
-            <div id="services">
+            <div id="services" className="px-4 sm:px-8 lg:px-16 py-4 sm:py-8 lg:py-12">
                 <Services />
             </div>
-            <div id="connect">
+            <div id="connect" className="px-4 sm:px-8 lg:px-16 py-4 sm:py-8 lg:py-12">
                 <Connect subject={subject}/>
             </div>
             {/* Footer */}
