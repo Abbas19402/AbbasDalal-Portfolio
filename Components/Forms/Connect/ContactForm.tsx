@@ -2,8 +2,10 @@ import { FormEvent, useState } from 'react'
 import { toast } from 'react-toastify'
 
 const ContactForm = ({ func }) => {
-
+  const [ loading, setLoading ] = useState<boolean>(false)
   const ContactFormSubmission = async(e:FormEvent<HTMLFormElement>) => {
+    setLoading(true)
+    e.stopPropagation();
     e.preventDefault();
     if(e.currentTarget) {
       let values: { [key: string]: FormDataEntryValue } = {};
@@ -14,6 +16,7 @@ const ContactForm = ({ func }) => {
       e.currentTarget.reset();
       await func(values);
       toast.success("Thanks for connecting!!")
+      setLoading(false)
     }
   }
 
@@ -75,7 +78,7 @@ const ContactForm = ({ func }) => {
             type="submit"
             className="block w-full rounded-lg bg-white/20 border border-white/20 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-md backdrop-blur hover:bg-indigo-500/80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-300"
           >
-            Let's talk
+            {!loading ? "Let's talk" : "Sending..."}
           </button>
         </div>
       </form>

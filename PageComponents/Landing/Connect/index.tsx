@@ -9,6 +9,7 @@ import Instagram from '../../../Components/Icons/instagram-line.png'
 import Github from '../../../Components/Icons/github-fill.png'
 import LinkedIn from '../../../Components/Icons/linkedin-box-fill.png' 
 import Forms from "../../../Components/Forms";
+import { useState } from "react";
 
 const Connect = ({ subject }) => {
     const router = useRouter();

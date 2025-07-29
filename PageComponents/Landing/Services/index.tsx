@@ -13,6 +13,8 @@ const serviceSvgs = [
 ];
 
 const Services = () => {
+    const isOddCount = services.length % 2 !== 0;
+
     return(
         <section className="w-full min-h-screen flex flex-col items-center py-24 px-4">
             <div className="w-full max-w-6xl mx-auto flex flex-col items-center gap-8">
@@ -20,7 +22,12 @@ const Services = () => {
                 <p className="text-white/70 text-center text-lg max-w-2xl mb-8 font-light">I offer a range of services to help you build, launch, and grow your digital products. Each service is tailored to deliver maximum value and quality.</p>
                 <div className="w-full grid grid-cols-1 gap-12 lg:grid-cols-2 justify-center">
                     {services.map((item, key) => (
-                        <div key={key} className="w-full max-w-2xl mx-auto bg-white/5 border border-white/10 rounded-2xl shadow-lg p-8 flex flex-col gap-4 hover:shadow-2xl hover:border-indigo-400/40 transition-all duration-300">
+                        <div 
+                            key={key} 
+                            className={`w-full max-w-2xl mx-auto bg-white/5 border border-white/10 rounded-2xl shadow-lg p-8 flex flex-col gap-4 hover:shadow-2xl hover:border-indigo-400/40 transition-all duration-300 ${
+                                isOddCount && key === services.length - 1 ? 'lg:col-span-2 lg:max-w-2xl' : ''
+                            }`}
+                        >
                             <div className="flex flex-row gap-2 items-center">
                                 <div className="w-fit h-10 flex items-center justify-start">{serviceSvgs[key % serviceSvgs.length]}</div>
                                 <h3 className="text-xl font-bold text-indigo-200 mb-2 tracking-wide">{item.service}</h3>

@@ -16,7 +16,7 @@ const Introduction: NextPage<ScriptProps> = () => {
     const sidebarStatus = useSelector<RootState , Boolean>(state => state.transitions.sidebarStatus);
     return (
         <div className="w-full h-screen flex flex-col lg:flex-row justify-evenly items-center relative overflow-hidden">
-            <div className="hidden lg:block absolute left-0 top-0 w-[60vw] h-[80vh] bg-white/10 border border-white/10 rounded-3xl shadow-2xl backdrop-blur-2xl z-0 blur-sm" style={{filter:'blur(2px)'}} />
+            {/* <div className="hidden lg:block absolute left-0 top-0 w-[60vw] h-[80vh] bg-white/10 border border-white/10 rounded-3xl shadow-2xl backdrop-blur-2xl z-0 blur-sm" style={{filter:'blur(2px)'}} /> */}
             <div className={`relative z-10 flex flex-col justify-center items-start w-full lg:w-[60%] h-fit lg:h-[80%] px-4 sm:px-8 lg:px-10 py-8 lg:py-10`}>
                 <span className="text-base sm:text-lg md:text-xl text-indigo-200/80 mb-4 sm:mb-8 tracking-wide animate-fade-in text-left w-full">Welcome to my digital space!</span>
                 <div className="flex flex-col gap-y-2 sm:gap-y-4 w-full text-left">
