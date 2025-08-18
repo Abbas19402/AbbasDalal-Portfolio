@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import { ScriptProps } from "next/script";
 import { Neucha } from '@next/font/google';
 import { useSelector } from "react-redux";
-import CodeAnimation from '../../../public/Assets/Animations/Code4.json'
 import { RootState } from "../../../redux/Store";   
 import dynamic from "next/dynamic";
+import { useState, useEffect } from "react";
 const DynamicLottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const neucha = Neucha({
@@ -14,6 +14,17 @@ const neucha = Neucha({
 
 const Introduction: NextPage<ScriptProps> = () => {
     const sidebarStatus = useSelector<RootState , Boolean>(state => state.transitions.sidebarStatus);
+    const [codeAnimation, setCodeAnimation] = useState(null);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            fetch('/Assets/Animations/Code4.json')
+                .then(response => response.json())
+                .then(data => setCodeAnimation(data))
+                .catch(error => console.error('Error loading animation:', error));
+        }
+    }, []);
+
     return (
         <div className="w-full h-screen flex flex-col lg:flex-row justify-evenly items-center relative overflow-hidden">
             {/* <div className="hidden lg:block absolute left-0 top-0 w-[60vw] h-[80vh] bg-white/10 border border-white/10 rounded-3xl shadow-2xl backdrop-blur-2xl z-0 blur-sm" style={{filter:'blur(2px)'}} /> */}
@@ -25,14 +36,14 @@ const Introduction: NextPage<ScriptProps> = () => {
                     <span className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-indigo-400 via-sky-400 to-cyan-300 bg-clip-text text-transparent drop-shadow-lg text-left">Building seamless digital experiences</span>
                 </div>
                 <p className="mt-4 sm:mt-8 text-sm sm:text-base md:text-lg text-white/70 max-w-2xl animate-fade-in-slow leading-relaxed text-left">
-                    I craft seamless digital experiences, blending beautiful design with robust code. Passionate about building products that make a difference, I specialize in web, mobile, and backend development. Let's create something amazing together.
+                    I craft seamless digital experiences, blending beautiful design with robust code.
                 </p>
                 <div className="block lg:hidden w-full flex justify-center mt-8">
-                    {typeof window !== 'undefined' && <DynamicLottie animationData={CodeAnimation} loop={true} />}
+                    {codeAnimation && <DynamicLottie animationData={codeAnimation} loop={true} />}
                 </div>
             </div>
             <div className={`hidden lg:flex relative w-[35%] h-[70%] shrink-0 justify-center`}>
-                {typeof window !== 'undefined' && <DynamicLottie animationData={CodeAnimation} loop={true} />}
+                {codeAnimation && <DynamicLottie animationData={codeAnimation} loop={true} />}
             </div>
         </div>
     )

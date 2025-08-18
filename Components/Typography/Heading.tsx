@@ -1,11 +1,11 @@
-import { Advent_Pro } from '@next/font/google'
+import { Lexend } from '@next/font/google'
 import React from 'react'
 
 interface HeadingType {
     heading: String
 }
 
-const font = Advent_Pro({
+const font = Lexend({
     subsets: ['latin'],
     weight: "400"
 })

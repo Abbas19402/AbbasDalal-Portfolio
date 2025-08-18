@@ -2,11 +2,10 @@ import type { NextPage } from "next";
 import { ScriptProps } from "next/script";
 import SkillsArray from "../../../Constants/Skills/Skills";
 import Cards from "../../../Components/Cards";
-import Styles from '../../../styles/rmScrollbar.module.css'
-import { Advent_Pro } from "@next/font/google";
+import { Lexend } from "@next/font/google";
 import Heading from "../../../Components/Typography/Heading";
 
-const font = Advent_Pro({
+const font = Lexend({
   subsets: ['latin'],
   weight: '800'
 })

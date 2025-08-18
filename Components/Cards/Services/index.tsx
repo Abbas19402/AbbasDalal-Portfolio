@@ -1,4 +1,4 @@
-import { Advent_Pro } from "@next/font/google";
+import { Lexend } from "@next/font/google";
 import { useRouter } from "next/router"
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
     setSubject: React.Dispatch<React.SetStateAction<string>>;
 }  
 
-const font = Advent_Pro({
+const font = Lexend({
     subsets: ['latin'],
     weight: '800'
 })

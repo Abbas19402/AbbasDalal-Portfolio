@@ -1,7 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { Abel, Advent_Pro } from "@next/font/google"
+import { Lexend } from "@next/font/google"
 
 interface Props {
     gradient: {From: String, Via: String, To: String},
@@ -13,7 +13,7 @@ interface Props {
     imageSrc: StaticImageData
 }
 
-const customFont = Advent_Pro({
+const customFont = Lexend({
     subsets: ['latin'],
     weight: '400'
 })

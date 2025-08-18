@@ -13,7 +13,7 @@ const ServicePage: NextPage = () => {
             <div className="w-full py-2 px-4 text-white tracking-wider font-light text-center text-6xl my-7">Services</div>
             {BannerServicesConstants.map((item,index)=> (
                 <Banners.Service 
-                animation={item.animation}
+                animationPath={item.animationPath}
                 description={item.description}
                 list={item.techUsed}
                 title={item.service}
